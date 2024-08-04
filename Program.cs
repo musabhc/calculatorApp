@@ -16,7 +16,7 @@ namespace calculatorApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BasicCalculator());
+            Application.Run(new SimpleCalculator());
         }
     }
 }
