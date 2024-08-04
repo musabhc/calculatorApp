@@ -4,7 +4,7 @@ using System;
 
 namespace calculatorApp
 {
-    partial class Form1
+    partial class BasicCalculator
     {
         /// <summary>
         /// Required designer variable.
