@@ -4,7 +4,7 @@ using System;
 
 namespace calculatorApp
 {
-    partial class BasicCalculator
+    partial class SimpleCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@ namespace calculatorApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SimpleCalculator));
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.percentBtn = new System.Windows.Forms.Button();
             this.clearEntryBtn = new System.Windows.Forms.Button();
@@ -356,6 +357,7 @@ namespace calculatorApp
             this.Controls.Add(this.clearEntryBtn);
             this.Controls.Add(this.percentBtn);
             this.Controls.Add(this.txtDisplay);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BasicCalculator";
             this.Text = "Basic Calculator";
             this.ResumeLayout(false);

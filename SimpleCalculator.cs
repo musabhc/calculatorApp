@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace calculatorApp
 {
-    public partial class BasicCalculator : Form
+    public partial class SimpleCalculator : Form
     {
         private string operation = "";
         private double result = 0;
-        public BasicCalculator()
+        public SimpleCalculator()
         {
             InitializeComponent();
         }
