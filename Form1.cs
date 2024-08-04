@@ -21,7 +21,14 @@ namespace calculatorApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(result != 0 && operation != "")
+            {
+                txtDisplay.Text = (result * double.Parse(txtDisplay.Text) / 100).ToString();
+            }
+            else
+            {
+                txtDisplay.Text = "0";
+            }
         }
 
         private void button2_Click(object sender, EventArgs e) // Clear Entry Button
@@ -36,7 +43,7 @@ namespace calculatorApp
             operation = "";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // Remove Button
         {
 
         }
