@@ -1,5 +1,5 @@
 # Simple Calculator for Windows
- Basic calculator app for Windows.
+ Simple calculator app for Windows.
 ## Operations and Others
 The simple calculator can perform operations such as addition, subtraction, multiplication, division, percentage calculation, square root, square, inverse of a number, deleting the entered value, deleting the value on the screen and deleting all data.
 ## App Images
