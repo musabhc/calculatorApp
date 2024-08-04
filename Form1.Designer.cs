@@ -149,6 +149,7 @@ namespace calculatorApp
             this.reciprocalBtn.TabIndex = 5;
             this.reciprocalBtn.Text = "1/x";
             this.reciprocalBtn.UseVisualStyleBackColor = true;
+            this.reciprocalBtn.Click += new System.EventHandler(this.reciprocalBtn_Click);
             // 
             // multiplicationBtn
             // 

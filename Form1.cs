@@ -40,6 +40,7 @@ namespace calculatorApp
         {
             result = 0;
             txtDisplay.Clear();
+            inputBox.Clear();
             operation = "";
         }
 
@@ -192,6 +193,14 @@ namespace calculatorApp
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void reciprocalBtn_Click(object sender, EventArgs e)
+        {
+            if(txtDisplay.Text.Length > 0)
+            {
+                txtDisplay.Text = (1/(double.Parse(txtDisplay.Text))).ToString();
             }
         }
     }
