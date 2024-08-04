@@ -45,7 +45,10 @@ namespace calculatorApp
 
         private void button4_Click(object sender, EventArgs e) // Remove Button
         {
-
+            if (txtDisplay.Text.Length > 0)
+            {
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.Text.Length - 1);
+            }
         }
 
         private void resultReverseBtn_Click(object sender, EventArgs e)
@@ -119,23 +122,72 @@ namespace calculatorApp
         {
             operation = "+";
             result = double.Parse(txtDisplay.Text);
+            inputBox.Text = result + operation;
             txtDisplay.Clear();
         }
 
+        private void subtractionBtn_Click(object sender, EventArgs e)
+        {
+            operation = "-";
+            result = double.Parse(txtDisplay.Text);
+            inputBox.Text = result + operation;
+            txtDisplay.Clear();
+        }
+
+        private void multiplicationBtn_Click(object sender, EventArgs e)
+        {
+            operation = "*";
+            result = double.Parse(txtDisplay.Text);
+            inputBox.Text = result + operation;
+            txtDisplay.Clear();
+        }
+
+        private void divisionBtn_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            result = double.Parse(txtDisplay.Text);
+            inputBox.Text = result + operation;
+            txtDisplay.Clear();
+        }
+
+        private void rootBtn_Click(object sender, EventArgs e)
+        {
+            if(double.Parse(txtDisplay.Text) > 0)
+            {
+                txtDisplay.Text = Math.Sqrt(double.Parse(txtDisplay.Text)).ToString();
+            }
+        }
+
+        private void squareBtn_Click(object sender, EventArgs e)
+        {
+            if(txtDisplay.Text.Length > 0) 
+            {
+                txtDisplay.Text = (double.Parse(txtDisplay.Text)* double.Parse(txtDisplay.Text)).ToString();
+            }
+        }
+
+        private void inputBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
         private void resultBtn_Click(object sender, EventArgs e)
         {
             switch (operation)
             {
                 case "+":
+                    inputBox.Text += txtDisplay.Text;
                     txtDisplay.Text = (result + double.Parse(txtDisplay.Text)).ToString();
                     break;
                 case "-":
+                    inputBox.Text += txtDisplay.Text;
                     txtDisplay.Text = (result - double.Parse(txtDisplay.Text)).ToString();
                     break;
                 case "*":
+                    inputBox.Text += txtDisplay.Text;
                     txtDisplay.Text = (result * double.Parse(txtDisplay.Text)).ToString();
                     break;
                 case "/":
+                    inputBox.Text += txtDisplay.Text;
                     txtDisplay.Text = (result / double.Parse(txtDisplay.Text)).ToString();
                     break;
                 default:

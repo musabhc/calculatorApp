@@ -57,6 +57,7 @@ namespace calculatorApp
             this.periodBtn = new System.Windows.Forms.Button();
             this.zeroBtn = new System.Windows.Forms.Button();
             this.resultReverseBtn = new System.Windows.Forms.Button();
+            this.inputBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -118,6 +119,7 @@ namespace calculatorApp
             this.divisionBtn.TabIndex = 8;
             this.divisionBtn.Text = "/";
             this.divisionBtn.UseVisualStyleBackColor = true;
+            this.divisionBtn.Click += new System.EventHandler(this.divisionBtn_Click);
             // 
             // rootBtn
             // 
@@ -127,6 +129,7 @@ namespace calculatorApp
             this.rootBtn.TabIndex = 7;
             this.rootBtn.Text = "√x";
             this.rootBtn.UseVisualStyleBackColor = true;
+            this.rootBtn.Click += new System.EventHandler(this.rootBtn_Click);
             // 
             // squareBtn
             // 
@@ -136,6 +139,7 @@ namespace calculatorApp
             this.squareBtn.TabIndex = 6;
             this.squareBtn.Text = "x^2";
             this.squareBtn.UseVisualStyleBackColor = true;
+            this.squareBtn.Click += new System.EventHandler(this.squareBtn_Click);
             // 
             // reciprocalBtn
             // 
@@ -154,6 +158,7 @@ namespace calculatorApp
             this.multiplicationBtn.TabIndex = 12;
             this.multiplicationBtn.Text = "X";
             this.multiplicationBtn.UseVisualStyleBackColor = true;
+            this.multiplicationBtn.Click += new System.EventHandler(this.multiplicationBtn_Click);
             // 
             // numberBtn3
             // 
@@ -193,6 +198,7 @@ namespace calculatorApp
             this.subtractionBtn.TabIndex = 16;
             this.subtractionBtn.Text = "-";
             this.subtractionBtn.UseVisualStyleBackColor = true;
+            this.subtractionBtn.Click += new System.EventHandler(this.subtractionBtn_Click);
             // 
             // numberBtn6
             // 
@@ -304,11 +310,26 @@ namespace calculatorApp
             this.resultReverseBtn.UseVisualStyleBackColor = true;
             this.resultReverseBtn.Click += new System.EventHandler(this.resultReverseBtn_Click);
             // 
+            // inputBox
+            // 
+            this.inputBox.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.inputBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.inputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.inputBox.Location = new System.Drawing.Point(190, 12);
+            this.inputBox.Multiline = true;
+            this.inputBox.Name = "inputBox";
+            this.inputBox.ReadOnly = true;
+            this.inputBox.Size = new System.Drawing.Size(173, 47);
+            this.inputBox.TabIndex = 25;
+            this.inputBox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(380, 538);
+            this.Controls.Add(this.inputBox);
             this.Controls.Add(this.resultBtn);
             this.Controls.Add(this.periodBtn);
             this.Controls.Add(this.zeroBtn);
@@ -335,11 +356,10 @@ namespace calculatorApp
             this.Controls.Add(this.percentBtn);
             this.Controls.Add(this.txtDisplay);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Basic Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            Load += MainForm_Load;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -379,7 +399,7 @@ namespace calculatorApp
         private System.Windows.Forms.Button periodBtn;
         private System.Windows.Forms.Button zeroBtn;
         private System.Windows.Forms.Button resultReverseBtn;
-
+        private TextBox inputBox;
     }
 
 }
