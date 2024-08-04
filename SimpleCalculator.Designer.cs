@@ -325,7 +325,7 @@ namespace calculatorApp
             this.inputBox.TabIndex = 25;
             this.inputBox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
             // 
-            // BasicCalculator
+            // SimpleCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,7 +358,7 @@ namespace calculatorApp
             this.Controls.Add(this.percentBtn);
             this.Controls.Add(this.txtDisplay);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "BasicCalculator";
+            this.Name = "SimpleCalculator";
             this.Text = "Basic Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
