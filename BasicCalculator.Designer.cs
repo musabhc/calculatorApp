@@ -324,11 +324,11 @@ namespace calculatorApp
             this.inputBox.TabIndex = 25;
             this.inputBox.TextChanged += new System.EventHandler(this.inputBox_TextChanged);
             // 
-            // Form1
+            // BasicCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(380, 538);
             this.Controls.Add(this.inputBox);
             this.Controls.Add(this.resultBtn);
@@ -356,7 +356,7 @@ namespace calculatorApp
             this.Controls.Add(this.clearEntryBtn);
             this.Controls.Add(this.percentBtn);
             this.Controls.Add(this.txtDisplay);
-            this.Name = "Form1";
+            this.Name = "BasicCalculator";
             this.Text = "Basic Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
